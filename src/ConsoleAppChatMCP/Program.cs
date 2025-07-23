@@ -23,8 +23,6 @@ var configuration = new ConfigurationBuilder()
     .AddEnvironmentVariables()
     .Build();
 
-var internalPortMCP = Convert.ToInt32(configuration["MCP:InternalPort"]);
-
 var resourceBuilder = ResourceBuilder
     .CreateDefault()
     .AddService(OpenTelemetryExtensions.ServiceName);
